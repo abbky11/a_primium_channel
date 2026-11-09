@@ -1,23 +1,31 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Desi Video</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Desi Video | A Premium Channel</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #101827;
-  color: #fff;
+  color: white;
   font-family: Arial, sans-serif;
   display: grid;
   min-height: 100vh;
   place-items: center;
+  padding: 15px;
 }
+
 .card {
-  width: min(90%,440px);
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 440px;
   background: #1d2a40;
   border: 1px solid #34445f;
   border-radius: 20px;
@@ -25,28 +33,47 @@ body {
   text-align: center;
   box-shadow: 0 18px 50px #0006;
 }
+
 h1 {
-  margin: 0 0 12px;
   color: #f6c85f;
+  margin-bottom: 12px;
 }
+
 p {
   color: #d4dbea;
-  line-height: 1.6;
+  line-height: 1.7;
 }
+
 .price {
   font-size: 42px;
-  font-weight: 800;
-  margin: 22px;
+  font-weight: bold;
+  margin: 25px 0;
 }
+
 .btn {
-  display: inline-block;
+  display: block;
   background: #229ed9;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 15px 24px;
+  padding: 16px;
   border-radius: 12px;
+  margin-top: 25px;
 }
+
+.btn:hover {
+  background: #1687bd;
+}
+
+.notice {
+  margin-top: 20px;
+  padding: 10px;
+  background: #493b1e;
+  color: #ffd66b;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
 .small {
   font-size: 12px;
   color: #9eacc2;
@@ -54,19 +81,40 @@ p {
 }
 </style>
 </head>
+
 <body>
+
 <main class="card">
-  <h1>A Premium Channel</h1>
-  <p>Desi Video</p>
-  <div class="price">₹599</div>
-  <p>Desi Video देखने के लिए नीचे दिए गए Buy Now बटन पर क्लिक करें। सुरक्षित भुगतान Razorpay के माध्यम से करें।</p>
- <a class="btn"
+
+<h1>A Premium Channel</h1>
+
+<p>Desi Video</p>
+
+<div class="price">₹599</div>
+
+<p>
+Desi Video देखने के लिए नीचे दिए गए
+बटन पर क्लिक करें और Razorpay के माध्यम से
+सुरक्षित भुगतान करें।
+</p>
+
+<a class="btn"
 href="https://rzp.io/rzp/fmPgerC"
-    Buy Now – Pay ₹599
-  </a>
-  <div class="small">
-    भुगतान की पुष्टि Razorpay से होने के बाद ही एक्सेस मिलेगा।
-  </div>
+target="_blank"
+rel="noopener noreferrer">
+Buy Now – Pay ₹599
+</a>
+
+<div class="notice">
+TEST MODE ONLY – यह टेस्ट पेमेंट लिंक है।
+अभी वास्तविक भुगतान न करें।
+</div>
+
+<div class="small">
+भुगतान की पुष्टि Razorpay Webhook से होगी।
+</div>
+
 </main>
+
 </body>
 </html>
