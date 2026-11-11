@@ -1,115 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Desi Video - Premium Channel</title>
-
+<meta name="theme-color" content="#05040d">
+<meta name="description" content="Premium Channel access – one-time payment of ₹399.">
+<title>Premium Channel</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  background: #101827;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-.card {
-  width: 100%;
-  max-width: 440px;
-  padding: 32px 25px;
-  text-align: center;
-  background: #1d2a40;
-  border: 1px solid #34445f;
-  border-radius: 20px;
-  box-shadow: 0 18px 50px #0006;
-}
-
-h1 {
-  color: #f6c85f;
-  margin-bottom: 12px;
-}
-
-.course {
-  font-size: 19px;
-  color: #d4dbea;
-}
-
-.price {
-  font-size: 45px;
-  font-weight: 800;
-  margin: 25px 0;
-}
-
-.description {
-  color: #d4dbea;
-  line-height: 1.7;
-}
-
-.btn {
-  display: block;
-  margin-top: 25px;
-  padding: 16px;
-  background: #229ed9;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
-  border-radius: 12px;
-}
-
-.btn:hover {
-  background: #1687bd;
-}
-
-.small {
-  margin-top: 22px;
-  font-size: 12px;
-  color: #9eacc2;
-  line-height: 1.6;
-}
+*{box-sizing:border-box}
+:root{color-scheme:dark;--purple:#b56cff;--blue:#42c8ff;--muted:#b9b4ca}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at 15% 10%,#231042 0,transparent 38%),radial-gradient(ellipse at 90% 85%,#052d3b 0,transparent 42%),#05040d;color:#fff;font-family:Arial,Helvetica,sans-serif}
+.card{position:relative;width:100%;max-width:460px;padding:34px 26px;text-align:center;border:1px solid #9a58e8;border-radius:24px;background:linear-gradient(155deg,rgba(23,16,42,.97),rgba(6,15,27,.98));box-shadow:0 0 18px #9d4edd55,0 0 48px #3abdf733,inset 0 0 22px #7e3fe511;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0 18% auto;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--purple),transparent);box-shadow:0 0 16px var(--blue)}
+.brand{font-size:12px;font-weight:800;letter-spacing:4px;color:#a8e8ff;text-shadow:0 0 12px #42c8ff88}
+h1{margin:16px 0 10px;font-size:35px;line-height:1.15;color:#fff;text-shadow:0 0 12px #b56cffaa,0 0 28px #42c8ff55}
+.course{font-size:16px;color:#d8d2e8;letter-spacing:.5px}
+.price{font-size:52px;font-weight:900;margin:26px 0 8px;color:#b98aff;text-shadow:0 0 12px #b56cff88,0 0 28px #42c8ff44}
+.once{font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.description{margin:22px 0 0;color:#d1cbdc;line-height:1.7;font-size:14px}
+.btn{display:block;width:100%;margin-top:26px;padding:16px;background:linear-gradient(100deg,#8d42e8,#167fc9);color:white;border:1px solid #c49bff;font-weight:800;font-size:17px;letter-spacing:.7px;border-radius:13px;cursor:pointer;box-shadow:0 0 15px #8e4de977,0 0 28px #287fe844;transition:transform .15s,filter .15s}
+.btn:hover:not(:disabled){filter:brightness(1.15);transform:translateY(-1px)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.status{min-height:24px;margin-top:18px;color:#b9eaff;line-height:1.6;font-size:14px;overflow-wrap:anywhere}
+.status a{display:inline-block;margin-top:10px;padding:12px 18px;border:1px solid #b8a0ff;border-radius:10px;color:#fff;background:linear-gradient(100deg,#7435bb,#126b9e);font-weight:800;text-decoration:none;box-shadow:0 0 16px #8b5cf666}
+.small{margin-top:22px;font-size:11px;color:#9992ab;line-height:1.7}
+@media(max-width:380px){.card{padding:28px 19px}h1{font-size:30px}.price{font-size:46px}}
 </style>
 </head>
-
 <body>
-
 <main class="card">
-
-<h1>A Premium Channel</h1>
-
-<div class="course">Desi Video</div>
-
-<div class="price">₹599</div>
-
-<p class="description">
-Desi Video का एक्सेस खरीदने के लिए
-नीचे दिए गए Buy Now बटन पर क्लिक करें।
-भुगतान Razorpay के सुरक्षित Payment Page
-के माध्यम से करें।
-</p>
-
-<a class="btn"
-href="https://rzp.io/rzp/eucZmGw"
-target="_blank"
-rel="noopener noreferrer">
-Buy Now – Pay ₹599
-</a>
-
-<div class="small">
-भुगतान की पुष्टि Razorpay Webhook के माध्यम से की जाएगी।
-सफल भुगतान के बाद ही एक्सेस प्रदान किया जाएगा।
-</div>
-
+  <div class="brand">PREMIUM ACCESS</div>
+  <h1>Premium Channel</h1>
+  <div class="course">Exclusive Channel Access</div>
+  <div class="price">₹399</div>
+  <div class="once">One-time payment</div>
+  <p class="description">Premium Channel में शामिल होने के लिए नीचे दिए गए बटन से सुरक्षित भुगतान करें। Server द्वारा भुगतान सत्यापित होने के बाद Telegram Channel का Join बटन दिखाई देगा।</p>
+  <button class="btn" id="buyButton" type="button">BUY NOW — ₹399</button>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <div class="small">Secure payment powered by Razorpay.<br>भुगतान की पुष्टि Razorpay server verification के बाद ही होगी।</div>
 </main>
+<script>
+'use strict';
+const button = document.getElementById('buyButton');
+const statusBox = document.getElementById('status');
 
+function showJoinButton(url) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.textContent = 'JOIN TELEGRAM CHANNEL';
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  statusBox.textContent = 'Payment सफलतापूर्वक verify हो गया है। अब Telegram Channel join कर सकते हैं।';
+  statusBox.appendChild(document.createElement('br'));
+  statusBox.appendChild(link);
+  button.textContent = 'PAYMENT SUCCESSFUL';
+  button.disabled = true;
+}
+
+button.addEventListener('click', async () => {
+  if (typeof window.Razorpay !== 'function') {
+    statusBox.textContent = 'Razorpay Checkout load नहीं हुआ। Internet connection जाँचकर दोबारा कोशिश करें।';
+    return;
+  }
+  button.disabled = true;
+  statusBox.textContent = 'Razorpay Checkout तैयार हो रहा है...';
+  try {
+    const orderResponse = await fetch('/.netlify/functions/create-order', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'}
+    });
+    const order = await orderResponse.json();
+    if (!orderResponse.ok) throw new Error(order.error || 'Order नहीं बन पाया।');
+    if (order.amount !== 39900 || order.currency !== 'INR' || !order.orderId || !order.key) {
+      throw new Error('Server से गलत payment order मिला।');
+    }
+
+    const options = {
+      key: order.key,
+      amount: order.amount,
+      currency: order.currency,
+      name: 'Premium Channel',
+      description: 'Premium Channel Access',
+      order_id: order.orderId,
+      prefill: {},
+      notes: {product: 'Premium Channel'},
+      theme: {color: '#9b5cff'},
+      handler: async function (response) {
+        statusBox.textContent = 'Payment server पर verify हो रहा है...';
+        try {
+          const verifyResponse = await fetch('/.netlify/functions/verify-payment', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature
+            })
+          });
+          const result = await verifyResponse.json();
+          if (!verifyResponse.ok || result.verified !== true || !result.telegramUrl) {
+            throw new Error(result.error || 'Payment verification पूरा नहीं हुआ।');
+          }
+          showJoinButton(result.telegramUrl);
+        } catch (error) {
+          statusBox.textContent = (error.message || 'Payment verification पूरा नहीं हुआ।') +
+            ' यदि राशि कट गई है, तो दोबारा भुगतान करने से पहले Razorpay status जाँचें।';
+          button.disabled = false;
+        }
+      },
+      modal: {ondismiss: function () {
+        statusBox.textContent = 'Checkout बंद कर दिया गया। आप दोबारा कोशिश कर सकते हैं।';
+        button.disabled = false;
+      }}
+    };
+    const checkout = new window.Razorpay(options);
+    checkout.on('payment.failed', function (response) {
+      statusBox.textContent = response.error?.description || 'Payment पूरा नहीं हुआ। कृपया दोबारा कोशिश करें।';
+      button.disabled = false;
+    });
+    checkout.open();
+    statusBox.textContent = '';
+  } catch (error) {
+    statusBox.textContent = error.message || 'Server से संपर्क नहीं हो पाया।';
+    button.disabled = false;
+  }
+});
+</script>
 </body>
 </html>
